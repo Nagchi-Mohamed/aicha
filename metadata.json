@@ -1,0 +1,7 @@
+{
+  "name": "Ferdaous Wellness Store",
+  "description": "A high-end wellness and natural products store with a direct WhatsApp checkout flow and a comprehensive admin management portal.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
