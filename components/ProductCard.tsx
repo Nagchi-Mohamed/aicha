@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ShoppingCart, Eye, Check, Sparkles, Info, X } from 'lucide-react';
+import { Plus, Minus, ShoppingCart, Eye, Check, Info, X } from 'lucide-react';
 import { Product } from '../types';
 import { useAppContext } from '../App';
 import { useLanguage } from '../i18n/LanguageContext';
+import { AichaIcon } from './AichaLogo';
 
 interface ProductCardProps {
   product: Product;
@@ -36,8 +37,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Image Container with Dynamic Responsive Aspect Ratio */}
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
           {product.isBestseller && (
-            <span className={`absolute top-3 ${dir === 'rtl' ? 'right-3' : 'left-3'} z-10 bg-emerald-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-md flex items-center gap-1`}>
-              <Sparkles size={12} />
+            <span className={`absolute top-3 ${dir === 'rtl' ? 'right-3' : 'left-3'} z-10 bg-emerald-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-md flex items-center gap-1.5`}>
+              <AichaIcon size={13} className="text-white shrink-0" />
               {t.products.bestseller}
             </span>
           )}
